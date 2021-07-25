@@ -1,4 +1,6 @@
 function inverte(str) {
+    return str
+    
 
     
 }
