@@ -56,10 +56,13 @@ var watchList = [
 //   }
 
 //Solução:
-let ratings = watchList.map(function(item) {
-    return title: item{["Title"]}, rating: item{["imdbRating"]}
-})
 
   // Only change code above this line
   
-  console.log(JSON.stringify(ratings));
+ // console.log(JSON.stringify(ratings));
+//console.log(watchList[0].Title, watchList[0].Year)
+var teste = []
+for (let i=0;i<watchList.length; i++) {
+    teste.push(watchList[i].Title)
+}
+console.log(teste)

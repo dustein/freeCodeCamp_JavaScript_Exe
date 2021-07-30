@@ -6,3 +6,4 @@ Resolução de exercícios propostos no curso online "JavaScript Algorithms and 
 Iindex dos Módulos:
 
 BAS - Basic Algorithm Scripting
+FP - Functtional Programming
