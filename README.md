@@ -7,3 +7,4 @@ Iindex dos Módulos:
 
 BAS - Basic Algorithm Scripting
 FP - Functtional Programming
+IAS - intermediate Algorithm Scripting
