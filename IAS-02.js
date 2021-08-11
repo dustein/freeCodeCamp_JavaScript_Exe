@@ -1,3 +1,4 @@
+//Problema: return the symmetric difference of the two arrays.
 //cria um novo array com todos os itens. Filtra esse novo, retornando os que não são encontrados no arr1 OU no arr2
 function dif(arr1, arr2) {
   let newArr = arr1.concat(arr2)
