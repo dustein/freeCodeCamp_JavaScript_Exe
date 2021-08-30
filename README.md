@@ -1,10 +1,10 @@
 # freeCodeCamp_Javascript_exe
- Treinando Javascript
+Treinando Javascript
 
 Resolução de exercícios propostos no curso online "JavaScript Algorithms and Data Structures" do freeCodeCamp.
 
-Iindex dos Módulos:
+Index dos Módulos (sigla):
 
-BAS - Basic Algorithm Scripting
-FP - Functtional Programming
-IAS - Intermediate Algorithm Scripting
+* BAS - Basic Algorithm Scripting
+* FP - Functtional Programming
+* IAS - Intermediate Algorithm Scripting
