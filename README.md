@@ -8,4 +8,4 @@ Index dos Módulos (sigla):
 * BAS - Basic Algorithm Scripting
 * FP - Functtional Programming
 * IAS - Intermediate Algorithm Scripting
-* FP - Final Projects - JavaScript Algorithms and Data Structures Projects for Certification
+* FP - Final Projects - JavaScript Algorithms and Data Structures Projects for Certification.
