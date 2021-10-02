@@ -8,21 +8,50 @@ function romano(num) {
   let um = ""
   let resp = ""
   if (num/1000 >= 1) {
-    mil = "M".repeat(parseInt(num/1000))    
-    num -= 1000*(parseInt(num/1000))
-    console.log(num)
+    if (num > 3999) {
+      return "Apenas números abaixo de 4000..."
+    } else {
+      mil = "M".repeat(parseInt(num/1000))    
+      num -= 1000*(parseInt(num/1000))
+      console.log(num)
+    }
+
+
   } if (num/500 >= 1) {
-    quinhentos = "D".repeat(parseInt(num/500))    
+    if (num == 900) {
+      quinhentos = "CM"
+      num -= 900
+    } else {
+      quinhentos = "D".repeat(parseInt(num/500))    
+    }
+
     num -= 500*(parseInt(num/500))
     console.log(num)
+
   } if (num/100 >= 1) {
-    cem = "C".repeat(parseInt(num/100))    
+    if (num == 400) {
+      cem = "CD"
+      num -=400
+    } else {
+      cem = "C".repeat(parseInt(num/100))    
+    }
+
     num -= 100*(parseInt(num/100))
     console.log(num)
+
+
   } if (num/50 >= 1) {
-    cinquenta = "L".repeat(parseInt(num/50))    
+
+    if (num == 90) {
+      cinquenta = "XC"
+      num -= 90
+    } else {
+      cinquenta = "L".repeat(parseInt(num/50)) 
+    }
     num -= 50*(parseInt(num/50))
     console.log(num)
+
+
   } if (num/10 >= 1) {
 
     if (num == 40) {
@@ -57,4 +86,4 @@ function romano(num) {
   return resp = mil+quinhentos+cem+cinquenta+dez+cinco+um
 }
 
-console.log(romano(70))
+console.log(romano(4001))
