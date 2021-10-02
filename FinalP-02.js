@@ -1,3 +1,4 @@
+function romano(num) {
 
   let resp = ""
 
@@ -63,3 +64,6 @@
        
   }
   return resp
+}
+
+console.log(romano(44))
