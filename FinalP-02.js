@@ -24,18 +24,37 @@ function romano(num) {
     num -= 50*(parseInt(num/50))
     console.log(num)
   } if (num/10 >= 1) {
-    dez = "X".repeat(parseInt(num/10))   
+
+    if (num == 40) {
+      dez = "XL"
+    } else {
+      dez = "X".repeat(parseInt(num/10))   
+    }
+
     num -= 10*(parseInt(num/10))
     console.log(num)
+    
   } if (num/5 >= 1) {
-    cinco = "V".repeat(parseInt(num/5))    
-    num -= 5*(parseInt(num/5))
+    if (num == 9) {
+      cinco = "IX"
+      num -= 9
+    } else {
+      cinco = "V"//.repeat(parseInt(num/5))
+      num -= 5
+    }
+    //num -= 5//*(parseInt(num/5))
     console.log(num)
+
   } if (num/1 >= 1) {
+    if (num == 4) {
+      um = "IV"
+    } else {
     um = "I".repeat(parseInt(num/1))
+    }
+    
        
   }
   return resp = mil+quinhentos+cem+cinquenta+dez+cinco+um
 }
 
-console.log(romano(1678))
+console.log(romano(70))
