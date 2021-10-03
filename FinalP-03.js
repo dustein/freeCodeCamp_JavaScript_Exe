@@ -3,12 +3,22 @@ let frase = "SERR PBQR PNZC"
 // console.log(String.fromCharCode(69))
 let nova = ""
 for (let i=0; i<frase.length; i++) {
-    if (frase.charCodeAt(i)-13 > 65) {
-        console.log(String.fromCharCode(frase.charCodeAt(i)-13))
+//    console.log(frase.charCodeAt(i))
+    let origem = frase.charCodeAt(i)
+    
+    if (origem > 64 && origem < 91) {
+        if ((origem-13) > 64) {
+            console.log(origem + "->" + String.fromCharCode(origem-13))
+        } else {
+            console.log(origem + "->>" + String.fromCharCode(origem+13))
+            //console.log(13-origem+65)
+        }
     } else {
-//        console.log(String.fromCharCode(frase.charCodeAt(i-(i-65)- (90-(i-65)))))
+        console.log(origem)
     }
+
+
+    
     
 }
 
-//se X-13 for menor que 65 -> X - (oque falta pra 65) - (90 - (X - o que faltava pra 65))
