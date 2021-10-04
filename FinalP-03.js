@@ -1,18 +1,24 @@
-let frase = "SERR PBQR PNZC"
+function rot13(str) {
 
-let nova = ""
-for (let i=0; i<frase.length; i++) {
+  let nova = ""
+  
+  for (let i=0; i<str.length; i++) {
 
-    let origem = frase.charCodeAt(i)
+    let origem = str.charCodeAt(i)
     
     if (origem > 64 && origem < 91) {
         if ((origem-13) > 64) {
-            console.log(origem + "->" + String.fromCharCode(origem-13))
+          nova += String.fromCharCode(origem-13)
+            
         } else {
-            console.log(origem + "->>" + String.fromCharCode(origem+13))
+          nova += String.fromCharCode(origem+13)            
 
         }
     } else {
-        console.log(origem)
-    }
+      nova += String.fromCharCode(origem)        
+    }  
 }
+  return nova
+}
+
+console.log(rot13("SERR PBQR PNZC"))
