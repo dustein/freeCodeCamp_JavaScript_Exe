@@ -1,5 +1,6 @@
 function telephoneCheck(str) {
-  return true;
+  let regraNumeros = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/
+  return regraNumeros.test(str)    
 }
 
-telephoneCheck("555-555-5555");
+console.log(telephoneCheck("2555-555-5555"))
