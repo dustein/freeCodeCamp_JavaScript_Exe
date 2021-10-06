@@ -1,24 +1,26 @@
+const moedas = [["PENNY", 0.01], ["NICKEL", 0.05], ["DIME", 0.1], ["QUARTER", 0.25], ["ONE", 1], ["FIVE", 5], ["TEN", 10], ["TWENTY", 20], ["ONE HUNDRED", 100]]
 function trocar(compra, pago, carteira) {
-  troco = pago - compra
-  let moedas = [["PENNY", 0.01], ["NICKEL", 0.05], ["DIME", 0.1], ["QUARTER", 0.25], ["ONE", 1], ["FIVE", 5], ["TEN", 10], ["TWENTY", 20], ["ONE HUNDRED", 100]]
+  devido = pago - compra
+  troco = devido.toFixed(2)
   //let carteira = [["cents", 10], ["cinquentas", 10], ["um", 10]]
   console.log(`Troco devido: ${troco}`)
   for (let i = moedas.length-1; i>=0; i--) {
     //console.log(`carteira: ${carteira[i]}`)
-    console.log(`testando ${moedas[i][1]}`)
+    //console.log(`testando ${moedas[i][1]}`)
     //while troco maior que moeda da vez, subtrai uma moeda da vez da carteira
-    while (troco >= moedas[i][1]) {
+    
+    while (troco >= moedas[i][1] && carteira[i][1] >= moedas[i][1]) {
+      // if (troco >= carteira[i][1]) {
+      //   console.log(`troco ${troco} - carteira: ${carteira[i][1]}`)
+      // }
       //tira a moeda da vez do troco
       //console.log(moedas[i][1])
-      if (troco >= carteira[i][1]) {
-        console.log(`${moedas[i][1]} retirados de ${carteira[i][1]}`)
+      console.log(`${moedas[i][1]} retirados de ${carteira[i][1]}`)
       troco -= moedas[i][1]
       console.log(`Troco devido: ${troco}`)
       //tira a moeda da vez da carteira
       carteira[i][1] -= moedas[i][1]
-      console.log(`Atualizado: ${carteira[i]}`)
-      }
-      
+      console.log(`Atualizado: ${carteira[i]}`)     
       
     }
     
@@ -27,6 +29,37 @@ function trocar(compra, pago, carteira) {
 }
 
 console.log(trocar(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]))
+
+
+// function trocar(compra, pago, carteira) {
+//   troco = pago - compra
+//   let moedas = [["PENNY", 0.01], ["NICKEL", 0.05], ["DIME", 0.1], ["QUARTER", 0.25], ["ONE", 1], ["FIVE", 5], ["TEN", 10], ["TWENTY", 20], ["ONE HUNDRED", 100]]
+//   //let carteira = [["cents", 10], ["cinquentas", 10], ["um", 10]]
+//   console.log(`Troco devido: ${troco}`)
+//   for (let i = moedas.length-1; i>=0; i--) {
+//     //console.log(`carteira: ${carteira[i]}`)
+//     console.log(`testando ${moedas[i][1]}`)
+//     //while troco maior que moeda da vez, subtrai uma moeda da vez da carteira
+//     while (troco >= moedas[i][1]) {
+//       //tira a moeda da vez do troco
+//       //console.log(moedas[i][1])
+//       if (troco >= carteira[i][1]) {
+//         console.log(`${moedas[i][1]} retirados de ${carteira[i][1]}`)
+//       troco -= moedas[i][1]
+//       console.log(`Troco devido: ${troco}`)
+//       //tira a moeda da vez da carteira
+//       carteira[i][1] -= moedas[i][1]
+//       console.log(`Atualizado: ${carteira[i]}`)
+//       }
+      
+      
+//     }
+    
+//   }
+//   return carteira
+// }
+
+// console.log(trocar(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]))
 
 
 // //FinalP-05
